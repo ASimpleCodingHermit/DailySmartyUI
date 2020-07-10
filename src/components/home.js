@@ -7,7 +7,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="home">
-        <div className="logo-main">
+        <div>
           <Logo />
           <SearchBar />
           <RecentPosts />
