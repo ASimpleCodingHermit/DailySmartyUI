@@ -3,6 +3,7 @@ import Logo from "./logo.js";
 import SearchBar from "./searchbar.js";
 import { connect } from "react-redux";
 import * as actions from "../actions";
+import ResultsPosts from "./resultsPosts.js";
 class Results extends Component {
   handleSearchBarSubmit(query) {
     this.props.FetchPostsWithQuery(query);
@@ -12,6 +13,7 @@ class Results extends Component {
       <div>
         <Logo size={55} />
         <SearchBar onSubmit={(query) => this.handleSearchBarSubmit(query)} />
+        <ResultsPosts />
       </div>
     );
   }
