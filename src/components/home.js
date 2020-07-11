@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import Logo from "./logo";
 import SearchBar from "./searchbar";
 import RecentPosts from "./recentposts";
-
-export default class App extends Component {
+import { connect } from "react-redux";
+import * as actions from "../actions";
+class Home extends Component {
   handleFormSubmit = function ({ query }) {
-    console.log("Trying the handle submit action", query);
+    this.props.FetchPostsWithQuery(query);
     this.props.history.push("/results");
   };
   render() {
@@ -20,3 +21,4 @@ export default class App extends Component {
     );
   }
 }
+export default connect(null, actions)(Home);

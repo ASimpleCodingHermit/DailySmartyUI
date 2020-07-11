@@ -9,3 +9,13 @@ export function FetchRecentPosts() {
     });
   };
 }
+export function FetchPostsWithQuery(query) {
+  return function (dispatch) {
+    axios
+      .get(`https://api.dailysmarty.com/search?q=${query}`)
+      .then((response) => {
+        console.log("response from data", response.data);
+        dispatch({ type: SET_RECENT_POSTS, payload: response.data.posts });
+      });
+  };
+}
