@@ -15,7 +15,7 @@ export function FetchPostsWithQuery(query, callback) {
       .then((response) => {
         dispatch({ type: SET_RESULTS_POSTS, payload: response.data.posts });
         if (callback) {
-          callback();
+          callback;
         }
       });
   };

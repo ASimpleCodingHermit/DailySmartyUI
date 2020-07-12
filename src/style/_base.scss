@@ -1,0 +1,21 @@
+html {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 62.5%;
+}
+.app-wrapper {
+  display: grid;
+  justify-content: center;
+}
+.home {
+  height: 100vh;
+  width: 66vw;
+  display: grid;
+  justify-items: center;
+  align-content: space-around;
+}
+.post-topic {
+  margin: 0 4px;
+}
