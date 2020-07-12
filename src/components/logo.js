@@ -9,11 +9,9 @@ class Logo extends Component {
     };
     return (
       <Link to={"/"}>
-        <img
-          style={size}
-          src="/assets/ds_circle_logo.png"
-          className="logo-main"
-        />
+        <div className="logo-main">
+          <img style={size} src="/assets/ds_circle_logo.png" />
+        </div>
       </Link>
     );
   }
