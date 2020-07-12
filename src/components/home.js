@@ -6,8 +6,9 @@ import { connect } from "react-redux";
 import * as actions from "../actions";
 class Home extends Component {
   handleFormSubmit = function ({ query }) {
-    this.props.FetchPostsWithQuery(query);
-    this.props.history.push("/results");
+    this.props.FetchPostsWithQuery(query, () => {
+      this.props.history.push("/results");
+    });
   };
   render() {
     return (

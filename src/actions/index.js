@@ -4,18 +4,19 @@ import axios from "axios";
 export function FetchRecentPosts() {
   return function (dispatch) {
     axios.get("https://api.dailysmarty.com/posts").then((response) => {
-      console.log("response from data", response.data);
       dispatch({ type: SET_RECENT_POSTS, payload: response.data.posts });
     });
   };
 }
-export function FetchPostsWithQuery(query) {
+export function FetchPostsWithQuery(query, callback) {
   return function (dispatch) {
     axios
       .get(`https://api.dailysmarty.com/search?q=${query}`)
       .then((response) => {
-        console.log("response from data", response.data);
         dispatch({ type: SET_RESULTS_POSTS, payload: response.data.posts });
+        if (callback) {
+          callback();
+        }
       });
   };
 }
