@@ -38,16 +38,13 @@ class Post extends Component {
         <div className="recent-post__topics">{this.renderTopics()}</div>
       </li>
     ) : this.props.type == "results" ? (
-      <li className="result-post">
+      <li className="result-post"
+          onMouseEnter={() => this.setState({ height: 70 })}
+          onMouseLeave={() => this.setState({ height: 0 })}
+      >
         <div className="result-post__topics">{this.renderTopics()}</div>
         <div className="result-post__title">
-          <a
-            href="{this.props.url_for_post}"
-            onMouseEnter={() => this.setState({ height: 70 })}
-            onMouseLeave={() => this.setState({ height: 0 })}
-          >
-            {this.props.title}
-          </a>
+          <a href="{this.props.url_for_post}">{this.props.title}</a>
         </div>
         <AnimateHeight duration={500} height={this.state.height}>
           <div className="result-post__links">{this.renderLinks()}</div>
