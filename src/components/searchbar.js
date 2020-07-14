@@ -1,13 +1,18 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { Field, reduxForm } from "redux-form";
+
 class SearchBar extends Component {
   handleFormSubmit = function ({ query }) {
     this.props.onSubmit(query);
   };
   renderInput(field) {
     return (
-      <input type="text" placeholder="Search Daily Smarty" {...field.input} />
+      <input
+        type="text"
+        placeholder="&#xf002; Search Daily Smarty"
+        {...field.input}
+      />
     );
   }
 

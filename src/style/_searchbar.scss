@@ -24,6 +24,8 @@
       -o-transition: 0.3s ease-in-out;
       &::placeholder {
         color: $blue;
+        font-family: "Font Awesome\ 5 Free",'Montserrat',sans-serif;
+        font-weight: 600;
       }
       &:focus {
         box-shadow: inset 2px 3px 5px 5px $Dark-blue;

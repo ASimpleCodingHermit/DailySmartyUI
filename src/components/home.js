@@ -4,6 +4,7 @@ import SearchBar from "./searchbar";
 import RecentPosts from "./recentposts";
 import { connect } from "react-redux";
 import * as actions from "../actions";
+
 class Home extends Component {
   handleFormSubmit = function ({ query }) {
     this.props.FetchPostsWithQuery(query, () => {
