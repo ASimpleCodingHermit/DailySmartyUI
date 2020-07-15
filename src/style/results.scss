@@ -47,13 +47,15 @@ grid-row-gap: 44px ;
 .post-link{
   min-height: 70px;
   display: flex;
+  flex-basis: 205px;
+  margin-right: 35px;
 
   .post-link__box{
     min-width: 70px;
     margin-right: 16px;
     background-color: $Dark-blue;
   }
-  .post-link__link{
+  // .post-link__link{
 
-  }
+  // }
 }
